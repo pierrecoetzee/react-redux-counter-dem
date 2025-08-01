@@ -1,103 +1,65 @@
-import Image from "next/image";
+import CounterDisplay from '@/components/CounterDisplay';
+import CounterControls from '@/components/CounterControls';
+import Drawer from '@/components/Drawer';
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="min-h-screen bg-gray-100 py-8">
+      {/* Drawer with Redux information */}
+      <Drawer>
+        <div className="bg-blue-50 p-4 rounded-lg">
+          <h3 className="text-lg font-bold text-blue-800 mb-3">When to use Redux:</h3>
+          <div className="space-y-2 text-sm text-gray-700">
+            <p>• <strong>Complex State:</strong> When managing large amounts of application state becomes difficult</p>
+            <p>• <strong>Shared State:</strong> When multiple components need access to the same state data</p>
+            <p>• <strong>Predictable Updates:</strong> When you need a single source of truth for your app's state</p>
+            <p>• <strong>State History:</strong> When you need to track how state changes over time</p>
+            <p>• <strong>Performance:</strong> When state updates need to be optimized for larger applications</p>
+            <p>• <strong>Developer Tools:</strong> When you need powerful debugging capabilities</p>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+
+        <div className="bg-green-50 p-4 rounded-lg">
+          <h3 className="text-lg font-bold text-green-800 mb-3">Redux Core Concepts:</h3>
+          <div className="space-y-2 text-sm text-gray-700">
+            <p>• <strong>Store:</strong> Single source of truth for your app's state</p>
+            <p>• <strong>Actions:</strong> Plain objects describing what happened</p>
+            <p>• <strong>Reducers:</strong> Pure functions that specify how state changes</p>
+            <p>• <strong>Dispatch:</strong> Method to send actions to the store</p>
+            <p>• <strong>Selectors:</strong> Functions to extract data from the store</p>
+          </div>
+        </div>
+
+        <div className="bg-purple-50 p-4 rounded-lg">
+          <h3 className="text-lg font-bold text-purple-800 mb-3">This Demo Shows:</h3>
+          <div className="space-y-2 text-sm text-gray-700">
+            <p>• Two components sharing the same state</p>
+            <p>• Actions dispatched from one component</p>
+            <p>• State updates reflected in both components</p>
+            <p>• Action history tracking</p>
+            <p>• TypeScript integration</p>
+          </div>
+        </div>
+      </Drawer>
+
+      <div className="max-w-6xl mx-auto px-4">
+        <header className="text-center mb-8">
+          <h1 className="text-4xl font-bold text-gray-800 mb-2">
+            Redux State Management Demo
+          </h1>
+          <p className="text-lg text-gray-600">
+            Two components sharing state through Redux
+          </p>
+          <p className="text-sm text-gray-500 mt-2">
+            Click the menu button in the top-left to learn more about Redux
+          </p>
+        </header>
+
+        <div className="grid md:grid-cols-2 gap-8">
+          <CounterControls />
+          <CounterDisplay />
+        </div>
+      </div>
     </div>
   );
 }
