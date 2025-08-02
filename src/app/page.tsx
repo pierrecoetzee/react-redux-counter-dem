@@ -12,7 +12,7 @@ export default function Home() {
           <div className="space-y-2 text-sm text-gray-700">
             <p>• <strong>Complex State:</strong> When managing large amounts of application state becomes difficult</p>
             <p>• <strong>Shared State:</strong> When multiple components need access to the same state data</p>
-            <p>• <strong>Predictable Updates:</strong> When you need a single source of truth for your app's state</p>
+            <p>• <strong>Predictable Updates:</strong> When you need a single source of truth for your app&apos;s state</p>
             <p>• <strong>State History:</strong> When you need to track how state changes over time</p>
             <p>• <strong>Performance:</strong> When state updates need to be optimized for larger applications</p>
             <p>• <strong>Developer Tools:</strong> When you need powerful debugging capabilities</p>
@@ -22,7 +22,7 @@ export default function Home() {
         <div className="bg-green-50 p-4 rounded-lg">
           <h3 className="text-lg font-bold text-green-800 mb-3">Redux Core Concepts:</h3>
           <div className="space-y-2 text-sm text-gray-700">
-            <p>• <strong>Store:</strong> Single source of truth for your app's state</p>
+            <p>• <strong>Store:</strong> Single source of truth for your app&apos;s state</p>
             <p>• <strong>Actions:</strong> Plain objects describing what happened</p>
             <p>• <strong>Reducers:</strong> Pure functions that specify how state changes</p>
             <p>• <strong>Dispatch:</strong> Method to send actions to the store</p>
