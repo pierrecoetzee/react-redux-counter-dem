@@ -28,3 +28,6 @@
 ## Redux Chrome dev tools
 Install the redux chrome dev tools to get superpowers and check redux state in order to debug your application:
 <img src="public/chrome-dev-tools.png" alt="Demo" width="500">
+
+##Demo
+Visit the [vercel site](https://redux-nextjs-demo.vercel.app/) for a demo of the implementation.

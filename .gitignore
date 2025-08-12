@@ -12,6 +12,7 @@
 ./idea
 # testing
 /coverage
+.idea/*
 
 # next.js
 /.next/
